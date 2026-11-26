@@ -14,11 +14,6 @@ the owner, and every other chat is politely refused.
   hooks (laughter, exclamations, questions, numbers, hook words)
 - **Vertical 1080×1920 renders** — blurred-background fill, H.264/AAC,
   loudness-normalized to −14 LUFS, kept under Telegram's 50 MB limit
-- **Live progress** — one status message updates in place with a
-  percentage bar for downloading, transcribing, and rendering
-- **Automatic retries** — downloads rotate through your proxies,
-  transcription and rendering retry up to 3 times, sending retries 3
-  times; the bot tells you in chat whenever a retry happens
 - **Detailed error reports** — no generic one-line errors: failures
   include the failing tool's full error output (last 15 lines) in chat,
   or as an attached `.txt` log when it is too long for one message
@@ -45,7 +40,7 @@ the owner, and every other chat is politely refused.
 2. **Clone and create the virtualenvs:**
 
    ```bash
-   git clone <this-repo> yt-clipper && cd yt-clipper
+   git clone https://github.com/wxyz47/yt-clipper.git && cd yt-clipper
 
    python3 -m venv venv
    venv/bin/pip install -r requirements.txt
