@@ -1,0 +1,4 @@
+# Transcription venv dependencies — install into ./transcribe-venv
+# Used only by transcribe_worker.py (called as a subprocess by bot.py).
+faster-whisper>=1.0
+numpy>=1.26

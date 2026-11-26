@@ -1,0 +1,10 @@
+# Example proxy formats accepted by the bot's /setproxy command.
+# These are FAKE values for illustration only — paste your real proxies
+# to the bot in Telegram, never commit them to git.
+#
+# One proxy per line:
+http://user:pass@192.0.2.10:8080
+http://192.0.2.11:3128
+192.0.2.12:9000:myuser:mypass
+192.0.2.13:1080
+socks5://user:pass@192.0.2.14:1080

@@ -1,0 +1,9 @@
+# Bot venv dependencies — install into ./venv
+python-telegram-bot>=22
+yt-dlp>=2024.8.6
+yt-dlp-ejs>=0.8
+requests>=2.32
+
+# Transcription dependencies live in a SEPARATE venv (./transcribe-venv),
+# see requirements-transcribe.txt — faster-whisper is heavy and the bot
+# only calls it as a subprocess.
