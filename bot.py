@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""whizclip — Telegram highlight clipper bot.
+"""yt-clipper — Telegram highlight clipper bot.
 
 Long polling via python-telegram-bot. The bot token is read from the
 BOT_TOKEN environment variable (preferred) or from a local token.txt
@@ -52,7 +52,7 @@ DEFAULT_SETTINGS = {"subtitle": True, "watermark": True, "title": True,
 logging.basicConfig(filename=os.path.join(BASE, "bot.log"),
                     format="%(asctime)s %(levelname)s %(message)s",
                     level=logging.INFO)
-log = logging.getLogger("whizclip")
+log = logging.getLogger("yt-clipper")
 log.addHandler(logging.StreamHandler(sys.stdout))
 # httpx/telegram log full request URLs (which contain the token) at INFO —
 # silence them so the token never lands in bot.log.
@@ -771,7 +771,7 @@ async def process_clip_job(update: Update, context: ContextTypes.DEFAULT_TYPE,
 
 # ---------- handlers ----------
 WELCOME = (
-    "Hi! I'm *whizclip* 🎬 — a highlight clip maker bot.\n\n"
+    "Hi! I'm *yt-clipper* 🎬 — a highlight clip maker bot.\n\n"
     "How to use:\n"
     "• `/clip <YouTube link>` — make 5 vertical 1080x1920 clips from "
     "the best moments of a video\n"
@@ -1009,7 +1009,7 @@ def main():
     app.add_handler(CommandHandler("setproxy", setproxy))
     app.add_handler(CommandHandler("clearproxy", clearproxy))
     app.add_handler(CallbackQueryHandler(on_callback))
-    log.info("whizclip starting (long polling)")
+    log.info("yt-clipper starting (long polling)")
     app.run_polling(drop_pending_updates=True)
 
 
