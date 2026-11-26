@@ -1,5 +1,5 @@
 #!/bin/bash
-# Supervisor launcher for the yt-clipper-bot bot.
+# Supervisor launcher for the yt-clipper bot.
 # Runs the bot under a restart loop (a simple alternative to systemd on
 # hosts without a user bus). For a systemd setup, see the unit example
 # in README.md instead.
