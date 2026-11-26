@@ -1,4 +1,4 @@
-# yt-clipper 🎬
+# yt-clipper-bot 🎬
 
 A Telegram bot that turns a YouTube video into **5 vertical highlight
 clips** (1080×1920, ready for Shorts/Reels/TikTok): send a link, the bot
@@ -45,7 +45,7 @@ the owner, and every other chat is politely refused.
 2. **Clone and create the virtualenvs:**
 
    ```bash
-   git clone <this-repo> yt-clipper && cd yt-clipper
+   git clone <this-repo> yt-clipper-bot && cd yt-clipper-bot
 
    python3 -m venv venv
    venv/bin/pip install -r requirements.txt
@@ -77,15 +77,15 @@ the owner, and every other chat is politely refused.
    …or with systemd:
 
    ```ini
-   # ~/.config/systemd/user/yt-clipper.service
+   # ~/.config/systemd/user/yt-clipper-bot.service
    [Unit]
-   Description=yt-clipper Telegram clipper bot
+   Description=yt-clipper-bot Telegram clipper bot
    After=network-online.target
 
    [Service]
-   WorkingDirectory=/path/to/yt-clipper
+   WorkingDirectory=/path/to/yt-clipper-bot
    Environment=BOT_TOKEN=123456789:AA...
-   ExecStart=/path/to/yt-clipper/venv/bin/python bot.py
+   ExecStart=/path/to/yt-clipper-bot/venv/bin/python bot.py
    Restart=always
 
    [Install]
@@ -93,7 +93,7 @@ the owner, and every other chat is politely refused.
    ```
 
    ```bash
-   systemctl --user enable --now yt-clipper
+   systemctl --user enable --now yt-clipper-bot
    ```
 
 5. **Claim ownership:** open your bot in Telegram and send `/start`.
@@ -161,7 +161,7 @@ and `cookies.txt`.
 
 YouTube increasingly refuses downloads from data-center IPs with
 *"Sign in to confirm you're not a bot"*, and hides the actual video
-formats until its JS challenge is solved. yt-clipper counters this with
+formats until its JS challenge is solved. yt-clipper-bot counters this with
 three layers, in order:
 
 1. The **EJS challenge solver** (`yt-dlp-ejs` + Node) — always on.
